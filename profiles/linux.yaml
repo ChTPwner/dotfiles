@@ -1,3 +1,7 @@
+variables:
+  OS: "linux"
+
+target: "${HOME}"
 ## `dotfiles` to be deployed
 dotfiles:
     # Relative path in `dotfiles/`
@@ -6,7 +10,7 @@ dotfiles:
     # Optional: Alternative deploy target path. This will be used instead of [`Profile::target`] when
     # deploying.
     # Default: None
-    overwrite_target: "/home/demo/.config/nvim"
+    overwrite_target: ".config/nvim"
 
     # Optional: Merge operation/kind (like: Ask, Keep, Overwrite)
     # Default: Overwrite
