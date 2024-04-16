@@ -22,10 +22,10 @@ return {
   		ensure_installed = {
   			"lua-language-server", "stylua",
   			"html-lsp", "css-lsp" , "prettier",
-        "ansible-language-server", "ansible_lint",
+        "ansible-language-server", "ansible-lint",
         "bash-language-server",
         "clangd", "gopls", "omnisharp",
-        "pyright", "mypy", "ruff-lsp", "rust-analyzer", "rustfmt"
+        "pyright", "mypy", "ruff-lsp", "rust-analyzer",
   		},
   	},
   },
