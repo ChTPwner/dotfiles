@@ -1,0 +1,53 @@
+-- Pull in the wezterm API
+local wezterm = require 'wezterm'
+local act = wezterm.action
+
+-- This table will hold the configuration.
+local config = {}
+
+-- In newer versions of wezterm, use the config_builder which will
+-- help provide clearer error messages
+if wezterm.config_builder then
+  config = wezterm.config_builder()
+end
+
+-- This is where you actually apply your config choices
+
+-- For example, changing the color scheme:
+config.color_scheme = 'Brogrammer'
+
+config.hide_tab_bar_if_only_one_tab = true
+config.enable_scroll_bar = true
+config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.9
+--config.default_prog = {'/home/linuxbrew/.linuxbrew/bin/nu'}
+
+config.keys = {
+	{ key = 'o', mods = 'CTRL|SHIFT', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
+	{ key = 'e', mods = 'CTRL|SHIFT', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
+	{ key = '&', mods = 'ALT', action = act.ActivateTab(0) },
+	{ key = '2', mods = 'ALT', action = act.ActivateTab(1) },
+	{ key = '\"', mods = 'ALT', action = act.ActivateTab(2) },
+	{ key = '\'', mods = 'ALT', action = act.ActivateTab(3) },
+	{ key = '(', mods = 'ALT', action = act.ActivateTab(4) },
+	{ key = '-', mods = 'ALT', action = act.ActivateTab(5) },
+	{ key = '7', mods = 'ALT', action = act.ActivateTab(6) },
+	{ key = '_', mods = 'ALT', action = act.ActivateTab(7) },
+	{ key = '9', mods = 'ALT', action = act.ActivateTab(8) },
+	{ key = '0', mods = 'ALT', action = act.ActivateTab(9) },
+	{ key = ')', mods = 'ALT', action = act.ActivateTab(10) },
+	{ key = '=', mods = 'ALT', action = act.ActivateTab(11) },
+	{ key = 'UpArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
+	{ key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
+	{ key = 'DownArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
+	{ key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
+	{ key = 'LeftArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
+	{ key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
+	{ key = 'RightArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
+	{ key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
+}
+-- font size
+config.font_size = 10
+-- and finally, return the configuration to wezterm
+return config
+
