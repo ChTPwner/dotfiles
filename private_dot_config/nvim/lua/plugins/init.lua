@@ -25,7 +25,7 @@ return {
         "ansible-language-server", "ansible_lint",
         "arduino-language-server", "bash-language-server",
         "clangd", "angular-language-server", "gopls", "omnisharp",
-        "pyright", "mypy", "ruff"
+        "pyright", "mypy", "ruff-lsp", "rust-analyzer", "rustfmt"
   		},
   	},
   },
@@ -37,7 +37,8 @@ return {
   		ensure_installed = {
   		  "vim", "lua", "vimdoc", "bash", "arduino", "c", "c_sharp", "cmake",
         "html", "css", "yaml", "cpp", "dockerfile", "go", "java", "javascript", "make",
-        "markdown_inline", "python", "terraform", "typescript", "angular"
+        "markdown_inline", "python", "terraform", "typescript", "angular",
+        "rust"
   		},
       highlight = {
         enable = true,
