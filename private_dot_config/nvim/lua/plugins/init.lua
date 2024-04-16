@@ -23,8 +23,8 @@ return {
   			"lua-language-server", "stylua",
   			"html-lsp", "css-lsp" , "prettier",
         "ansible-language-server", "ansible_lint",
-        "arduino-language-server", "bash-language-server",
-        "clangd", "angular-language-server", "gopls", "omnisharp",
+        "bash-language-server",
+        "clangd", "gopls", "omnisharp",
         "pyright", "mypy", "ruff-lsp", "rust-analyzer", "rustfmt"
   		},
   	},
@@ -45,11 +45,19 @@ return {
       }
   	},
   },
+
   {
     "nvimtools/none-ls.nvim",
     ft = {"python"},
     opts = function()
       require "configs.null-ls"
+    end
+  },
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function()
+      vim.g.rustfmt_autosave = 1
     end
   }
 }
