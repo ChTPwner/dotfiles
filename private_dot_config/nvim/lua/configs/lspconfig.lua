@@ -4,7 +4,7 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local util = require "lspconfig/util"
+-- local util = require "lspconfig/util"
 local servers = { "html", "cssls", "lua_ls", "ansiblels",  }
 
 -- lsps with default config
@@ -29,16 +29,16 @@ lspconfig.pyright.setup {
   filetypes = {"python"},
 }
 
-lspconfig.rust_analyzer.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = {"rust"},
-  root_dir = util.root_pattern("Cargo.toml"),
-  settings = {
-    ['rust-analyzer'] = {
-      cargo = {
-        allFeatures = true,
-      }
-    },
-  },
-}
+-- lspconfig.rust_analyzer.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   filetypes = {"rust"},
+--   root_dir = util.root_pattern("Cargo.toml"),
+--   settings = {
+--     ['rust-analyzer'] = {
+--       cargo = {
+--         allFeatures = true,
+--       }
+--     },
+--   },
+-- }
