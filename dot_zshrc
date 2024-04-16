@@ -1,0 +1,17 @@
+# source antidote
+export VISUAL="/usr/bin/vim"
+export EDITOR="/usr/bin/vim"
+
+export PATH=$PATH:${HOME}/.local/bin:${HOME}/bin:${HOME}/go/bin
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+source /home/linuxbrew/.linuxbrew/opt/antidote/share/antidote/antidote.zsh
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+
+autoload -Uz compinit
+compinit
+antidote load
+
+source ~/.aliases.sh
+source ~/.envs.sh
+
+eval "$(starship init zsh)"
