@@ -18,7 +18,11 @@ ohmyzsh/ohmyzsh path:plugins/kubectl
 #ohmyzsh/ohmyzsh path:plugins/minikube
 #ohmyzsh/ohmyzsh path:plugins/helm
 ohmyzsh/ohmyzsh path:plugins/terraform
+{{ if eq .chezmoi.osRelease.id "ubuntu" }}
 ohmyzsh/ohmyzsh path:plugins/ubuntu
+{{ else if eq .chezmoi.osRelease.id "arch" }}
+ohmyzsh/ohmyzsh path:plugins/archlinux
+{{ end }}
 
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-autosuggestions
