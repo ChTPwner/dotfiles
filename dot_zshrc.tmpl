@@ -3,8 +3,14 @@ export VISUAL="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
 
 export PATH=$PATH:${HOME}/.local/bin:${HOME}/bin:${HOME}/go/bin
+{{ if eq .chezmoi.os "linux"}}
+{{   if  eq .chezmoi.osRelease.id "arch" }}
+source /usr/share/zsh-antidote/antidote.zsh
+{{   else }}
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source /home/linuxbrew/.linuxbrew/opt/antidote/share/antidote/antidote.zsh
+{{   end }}
+{{ end }}
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 
 autoload -Uz compinit
