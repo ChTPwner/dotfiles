@@ -76,13 +76,13 @@ return {
 		},
 	},
 
-	{
-		"nvimtools/none-ls.nvim",
-		ft = { "python" },
-		opts = function()
-			require("configs.null-ls")
-		end,
-	},
+	-- {
+	-- 	"nvimtools/none-ls.nvim",
+	-- 	ft = { "python" },
+	-- 	opts = function()
+	-- 		require("configs.null-ls")
+	-- 	end,
+	-- },
 	{
 		"rust-lang/rust.vim",
 		ft = "rust",

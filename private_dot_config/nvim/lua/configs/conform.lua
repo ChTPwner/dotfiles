@@ -1,17 +1,20 @@
 local options = {
 	formatters_by_ft = {
 		lua = { "stylua" },
-		python = {
-			"ruff_fix",
-			"ruff_format",
-		},
+		-- python = {
+		-- 	"ruff_fix",
+		-- 	"ruff_format",
+		-- },
 		rust = {
 			"rustfmt",
 		},
 		terraform = { "terraform_fmt" },
+		c = { "clang_format" },
+		cpp = { "clang_format" },
+		csharp = { "csharpier" },
 		css = { "prettier" },
 		html = { "prettier" },
-		["*"] = { "trim_whitespace" },
+		-- ["*"] = { "trim_whitespace" },
 	},
 
 	format_on_save = {
