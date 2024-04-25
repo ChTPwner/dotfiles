@@ -24,8 +24,9 @@ return {
   			"html-lsp", "css-lsp" , "prettier",
         "ansible-language-server", "ansible-lint",
         "bash-language-server",
-        "clangd", "gopls", "omnisharp",
+        "clangd", "gopls", "csharp_ls",
         "pyright", "mypy", "ruff-lsp", "rust-analyzer",
+        "terraform-ls"
   		},
   	},
   },
