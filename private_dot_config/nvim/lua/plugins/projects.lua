@@ -3,7 +3,9 @@ return {
 	opts = {
 		projects = { -- define project roots
 			"~/gits/*",
-			"~/Documents/perso/*",
+			"~/gits/*/*",
+			"~/gits/*/*/*",
+			"~/gits/*/*/*/*",
 		},
 	},
 	init = function()
