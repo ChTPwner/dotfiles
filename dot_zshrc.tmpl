@@ -11,11 +11,24 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source /home/linuxbrew/.linuxbrew/opt/antidote/share/antidote/antidote.zsh
 {{   end }}
 {{ end }}
-# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+
+# History
+HISTSIZE=5000
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
 
 autoload -Uz compinit
 compinit
 antidote load
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 source ~/.aliases.sh
 source ~/.envs.sh
