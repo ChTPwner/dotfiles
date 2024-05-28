@@ -18,10 +18,15 @@ ohmyzsh/ohmyzsh path:plugins/kubectl
 #ohmyzsh/ohmyzsh path:plugins/minikube
 #ohmyzsh/ohmyzsh path:plugins/helm
 ohmyzsh/ohmyzsh path:plugins/terraform
+ohmyzsh/ohmyzsh path:plugins/brew
+{{ if eq .chezmoi.os "darwin" }}
+ohmyzsh/ohmyzsh path:plugins/macos
+{{ else if eq .chezmoi.os "linux" }}
 {{ if eq .chezmoi.osRelease.id "ubuntu" }}
 ohmyzsh/ohmyzsh path:plugins/ubuntu
 {{ else if eq .chezmoi.osRelease.id "arch" }}
 ohmyzsh/ohmyzsh path:plugins/archlinux
+{{ end }}
 {{ end }}
 
 zsh-users/zsh-syntax-highlighting

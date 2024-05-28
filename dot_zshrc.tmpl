@@ -3,7 +3,10 @@ export VISUAL="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
 
 export PATH=$PATH:${HOME}/.local/bin:${HOME}/bin:${HOME}/go/bin
-{{ if eq .chezmoi.os "linux"}}
+{{ if eq .chezmoi.os "darwin" }}
+eval "$(/usr/local/bin/brew shellenv)"
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+{{ else if eq .chezmoi.os "linux"}}
 {{   if  eq .chezmoi.osRelease.id "arch" }}
 source /usr/share/zsh-antidote/antidote.zsh
 {{   else }}
