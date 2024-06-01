@@ -2,7 +2,7 @@
 export VISUAL="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
 
-export PATH=$PATH:${HOME}/.local/bin:${HOME}/bin:${HOME}/go/bin:${HOME}/.luarocks
+export PATH=$PATH:${HOME}/.local/bin:${HOME}/bin:${HOME}/go/bin:${HOME}/.luarocks/bin
 {{ if eq .chezmoi.os "darwin" }}
 eval "$(/usr/local/bin/brew shellenv)"
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
