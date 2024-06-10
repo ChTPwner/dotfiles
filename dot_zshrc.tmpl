@@ -1,6 +1,6 @@
 # source antidote
-export VISUAL="/usr/bin/vim"
-export EDITOR="/usr/bin/vim"
+export VISUAL="vi"
+export EDITOR="vim"
 
 export PATH=$PATH:${HOME}/.local/bin:${HOME}/bin:${HOME}/go/bin:${HOME}/.luarocks/bin
 {{ if eq .chezmoi.os "darwin" }}
@@ -40,5 +40,5 @@ source ~/.aliases.sh
 source ~/.envs.sh
 
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
