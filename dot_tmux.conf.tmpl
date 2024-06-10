@@ -1,0 +1,27 @@
+set -g prefix ^B
+
+set -g base-index 1
+set -g detach-on-destroy off
+set -g history-limit 1000000
+set -g renumber-windows on
+set -g set-clipboard on
+set -g status-key vi
+set -g mode-keys vi
+bind 'v' copy-mode
+set-option -g status-position top
+
+set -g mouse on
+
+# tpm plugins
+set -g @plugin 'catppuccin/tmux'
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'omerxx/tmux-sessionx'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-pain-control'
+set -g @plugin 'tmux-plugins/tmux-yank'
+
+# tmux-sessionx config
+set -g @sessionx-bind 'O'
+
+# run tpm
+run '~/.tmux/plugins/tpm/tpm'
