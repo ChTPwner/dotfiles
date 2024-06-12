@@ -9,6 +9,9 @@ set -g status-key vi
 set -g mode-keys vi
 bind 'v' copy-mode
 set-option -g status-position top
+set-option -g renumber-windows on
+set-option -g automatic-rename on
+set-option -g automatic-rename-format '#{b:pane_current_path}'
 
 set -g mouse on
 
@@ -45,36 +48,24 @@ set -g @sessionx-bind 'o'
 set -g @continuum-restore 'on'
 
 # catppuccin theme
-set -g @catppuccin_flavour 'macchiato' # latte,frappe, macchiato or mocha
-set -g @catppuccin_icon_window_last "󰖰"
-set -g @catppuccin_icon_window_current "󰖯"
-set -g @catppuccin_icon_window_zoom "󰁌"
-set -g @catppuccin_icon_window_mark "󰃀"
-set -g @catppuccin_icon_window_silent "󰂛"
-set -g @catppuccin_icon_window_activity "󱅫"
-set -g @catppuccin_icon_window_bell "󰂞"
-set -g @catppuccin_window_left_separator " "
-set -g @catppuccin_window_right_separator ""
-set -g @catppuccin_window_current_fill "all"
-
-set -g @catppuccin_window_middle_separator " "
-set -g @catppuccin_window_status_enable "yes"
-set -g @catppuccin_window_status_icon_enable "yes"
-# set -g @catppuccin_window_number_position "left"
-
-# set -g @catppuccin_window_default_fill "number"
-# set -g @catppuccin_window_default_text "#W"
-#
-# set -g @catppuccin_window_current_fill "number"
-# set -g @catppuccin_window_current_text "#W"
+# set -g @catppuccin_flavour 'mocha' # latte,frappe, macchiato or mocha
+set -g @catppuccin_window_left_separator ""
+set -g @catppuccin_window_right_separator " "
+set -g @catppuccin_window_middle_separator " █"
+set -g @catppuccin_window_number_position "right"
+set -g @catppuccin_window_default_fill "number"
+set -g @catppuccin_window_default_text "#W"
+set -g @catppuccin_window_current_fill "number"
+set -g @catppuccin_window_current_text "#W#{?window_zoomed_flag,(),}"
+set -g @catppuccin_status_left_separator  " "
+set -g @catppuccin_status_right_separator " "
+set -g @catppuccin_status_right_separator_inverse "no"
+set -g @catppuccin_status_fill "icon"
+set -g @catppuccin_status_connect_separator "no"
+set -g @catppuccin_directory_text "#{b:pane_current_path}"
 
 set -g @catppuccin_status_modules_right "directory"
 set -g @catppuccin_status_modules_left "session application"
-set -g @catppuccin_status_left_separator  " "
-set -g @catppuccin_status_right_separator ""
-set -g @catppuccin_status_fill "all"
-set -g @catppuccin_status_connect_separator "no"
 
-set -g @catppuccin_directory_text "#{pane_current_path}"
 # run tpm
 run '~/.tmux/plugins/tpm/tpm'
