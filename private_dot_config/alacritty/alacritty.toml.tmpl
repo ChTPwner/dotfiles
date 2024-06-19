@@ -7,7 +7,11 @@ style = "Block"
 unfocused_hollow = true
 
 [font]
+{{ if eq .chezmoi.os "darwin" }}
 size = 10.0
+{{ else }}
+size = 12.0
+{{ end }}
 
 [font.normal]
 family = "JetBrainsMono NF"
