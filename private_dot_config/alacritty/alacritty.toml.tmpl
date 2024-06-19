@@ -6,11 +6,10 @@ import = [
 style = "Block"
 unfocused_hollow = true
 
-[font]
-{{ if eq .chezmoi.os "darwin" }}
-size = 10.0
-{{ else }}
+[font]{{ if eq .chezmoi.os "darwin" }}
 size = 12.0
+{{ else }}
+size = 10.0
 {{ end }}
 
 [font.normal]
