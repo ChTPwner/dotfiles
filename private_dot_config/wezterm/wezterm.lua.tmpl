@@ -21,7 +21,7 @@ config.enable_scroll_bar = true
 config.window_decorations = "RESIZE"
 -- config.window_background_opacity = 0.9
 {{ if eq .chezmoi.os "windows" }}
-config.default_prog = {'powershell'}
+config.default_domain = "WSL:Ubuntu-24.04"
 {{ else }}
 config.default_prog = {'zsh'}
 {{ end }}
