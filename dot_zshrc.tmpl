@@ -27,7 +27,7 @@ setopt hist_save_no_dups
 setopt hist_find_no_dups
 
 autoload -Uz compinit
-compinit
+compinit -u
 antidote load
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -42,4 +42,4 @@ source ~/.envs.sh
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-echo 'eval "$(atuin init zsh)"' >> ~/.zshrc
+eval "$(atuin init zsh)"
