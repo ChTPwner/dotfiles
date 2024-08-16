@@ -211,20 +211,8 @@ require('lazy').setup({
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>w_', hidden = true },
       }
-      -- {
-      --        ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-      --        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-      --        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-      --        ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-      --        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-      --        ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
-      --        ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
-      --      }
       -- visual mode
       wk.add { '<leader>h', desc = 'Git [H]unk', mode = 'v' }
-      -- require('which-key').register({
-      --   ['<leader>h'] = { 'Git [H]unk' },
-      -- }, { mode = 'v' })
     end,
   },
 
@@ -357,35 +345,6 @@ require('lazy').setup({
       { 'folke/neodev.nvim', opts = {} },
     },
     config = function()
-      -- Brief aside: **What is LSP?**
-      --
-      -- LSP is an initialism you've probably heard, but might not understand what it is.
-      --
-      -- LSP stands for Language Server Protocol. It's a protocol that helps editors
-      -- and language tooling communicate in a standardized fashion.
-      --
-      -- In general, you have a "server" which is some tool built to understand a particular
-      -- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
-      -- (sometimes called LSP servers, but that's kind of like ATM Machine) are standalone
-      -- processes that communicate with some "client" - in this case, Neovim!
-      --
-      -- LSP provides Neovim with features like:
-      --  - Go to definition
-      --  - Find references
-      --  - Autocompletion
-      --  - Symbol Search
-      --  - and more!
-      --
-      -- Thus, Language Servers are external tools that must be installed separately from
-      -- Neovim. This is where `mason` and related plugins come into play.
-      --
-      -- If you're wondering about lsp vs treesitter, you can check out the wonderfully
-      -- and elegantly composed help section, `:help lsp-vs-treesitter`
-
-      --  This function gets run when an LSP attaches to a particular buffer.
-      --    That is to say, every time a new file is opened that is associated with
-      --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
-      --    function will be executed to configure the current buffer
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
         callback = function(event)
@@ -504,14 +463,10 @@ require('lazy').setup({
         rust_analyzer = {},
         csharp_ls = {},
         bashls = {},
-        -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-        --
-        -- Some languages (like typescript) have entire language plugins that can be useful:
-        --    https://github.com/pmizio/typescript-tools.nvim
-        --
-        -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
-        --
+        gitlab_ci_ls = {},
+        jinja_lsp = {
+          filetypes = { 'jinja' },
+        },
 
         lua_ls = {
           -- cmd = {...},
@@ -860,5 +815,21 @@ require('lazy').setup({
 })
 
 vim.cmd.colorscheme 'catppuccin'
+
+-- Gitlab CI LSP
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+  pattern = '*.gitlab-ci*.{yml,yaml}',
+  callback = function()
+    vim.bo.filetype = 'yaml.gitlab'
+  end,
+})
+
+vim.filetype.add {
+  extension = {
+    jinja = 'jinja',
+    jinja2 = 'jinja',
+    j2 = 'jinja',
+  },
+}
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
