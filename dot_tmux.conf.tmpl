@@ -9,6 +9,7 @@ set -g set-clipboard on
 set -g status-key vi
 set -g mode-keys vi
 bind 'v' copy-mode
+bind 'P' paste-buffer
 set-option -g status-position top
 set-option -g renumber-windows on
 set-option -g automatic-rename on
@@ -44,7 +45,7 @@ run-shell ~/.tmux/plugins/tmux-thumbs/tmux-thumbs.tmux
 # tmux-sessionx config
 unbind 'o'
 set -g @sessionx-bind 'o'
-set -g @sessionx-tree-mode 'on'
+set -g @sessionx-tree-mode 'off'
 set -g @sessionx-zoxide-mode 'on'
 set -g @sessionx-window-mode 'on'
 
