@@ -39,7 +39,7 @@ set -g @plugin 'fcsonline/tmux-thumbs'
 set -g @plugin 'sainnhe/tmux-fzf'
 
 # tmux thumbs
-set -g @thumbs-alphabet azerty
+# set -g @thumbs-alphaberrazerty
 run-shell ~/.tmux/plugins/tmux-thumbs/tmux-thumbs.tmux
 
 # tmux-sessionx config
@@ -53,24 +53,28 @@ set -g @sessionx-window-mode 'on'
 set -g @continuum-restore 'on'
 
 # catppuccin theme
-# set -g @catppuccin_flavour 'mocha' # latte,frappe, macchiato or mocha
-set -g @catppuccin_window_left_separator ""
-set -g @catppuccin_window_right_separator " "
-set -g @catppuccin_window_middle_separator " █"
-set -g @catppuccin_window_number_position "right"
-set -g @catppuccin_window_default_fill "number"
-set -g @catppuccin_window_default_text "#W"
-set -g @catppuccin_window_current_fill "number"
-set -g @catppuccin_window_current_text "#W#{?window_zoomed_flag,(),}"
-set -g @catppuccin_status_left_separator  " "
-set -g @catppuccin_status_right_separator " "
-set -g @catppuccin_status_right_separator_inverse "no"
-set -g @catppuccin_status_fill "icon"
-set -g @catppuccin_status_connect_separator "no"
-set -g @catppuccin_directory_text "#{b:pane_current_path}"
-
-set -g @catppuccin_status_modules_right "directory"
-set -g @catppuccin_status_modules_left "session application"
+set -g @catppuccin_flavour 'mocha' # latte,frappe, macchiato or mocha
+set -g @catppuccin_window_status_style "rounded"
+set -g status-left "#{E:@catppuccin_status_session}"
+set -g status-right "#{E:@catppuccin_status_application}"
+set -ag status-right "#{E:@catppuccin_status_directory}"
+# set -g @catppuccin_window_left_separator ""
+# set -g @catppuccin_window_right_separator " "
+# set -g @catppuccin_window_middle_separator " █"
+# set -g @catppuccin_window_number_position "right"
+# set -g @catppuccin_window_default_fill "number"
+# set -g @catppuccin_window_default_text "#W"
+# set -g @catppuccin_window_current_fill "number"
+# set -g @catppuccin_window_current_text "#W#{?window_zoomed_flag,(),}"
+# set -g @catppuccin_status_left_separator  " "
+# set -g @catppuccin_status_right_separator " "
+# set -g @catppuccin_status_right_separator_inverse "no"
+# set -g @catppuccin_status_fill "icon"
+# set -g @catppuccin_status_connect_separator "no"
+# set -g @catppuccin_directory_text "#{b:pane_current_path}"
+#
+# set -g @catppuccin_status_modules_right "directory"
+# set -g @catppuccin_status_modules_left "session application"
 
 # run tpm
 run '~/.tmux/plugins/tpm/tpm'
