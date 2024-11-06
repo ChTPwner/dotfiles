@@ -39,7 +39,7 @@ set -g @plugin 'fcsonline/tmux-thumbs'
 set -g @plugin 'sainnhe/tmux-fzf'
 
 # tmux thumbs
-set -g @thumbs-alphabet azerty
+# set -g @thumbs-alphaberrazerty
 run-shell ~/.tmux/plugins/tmux-thumbs/tmux-thumbs.tmux
 
 # tmux-sessionx config
@@ -79,13 +79,6 @@ set -g @catppuccin_window_text " #W #{pane_current_path}"
 #
 # set -g @catppuccin_status_modules_right "directory"
 # set -g @catppuccin_status_modules_left "session application"
-
-# display of active window
-# set -g window-status-current-format '#{window_index} #{b:pane_current_path}*'
-# display of all other windows
-# set -g window-status-format '#{window_index} #{b:pane_current_path}'
-#  make sure to update the window title every 5 seconds
-set -g status-interval 5
 
 # run tpm
 run '~/.tmux/plugins/tpm/tpm'
