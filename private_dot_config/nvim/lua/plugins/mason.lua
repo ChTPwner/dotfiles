@@ -3,7 +3,7 @@ return {
   opts = {
     ensure_installed = {
       "stylua",
-      "actionlist",
+      "actionlint",
       "shfmt",
       "terraform-ls",
       "tflint",
