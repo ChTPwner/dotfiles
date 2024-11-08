@@ -10,6 +10,7 @@ return {
       "tfsec",
       "black",
       "isort",
+      "pylint",
       "clangd",
       "dockerfile-language-server",
       "helm-ls",
