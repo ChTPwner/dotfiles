@@ -13,15 +13,16 @@ end
 
 -- This is where you actually apply your config choices
 
--- For example, changing the color scheme:
-config.color_scheme = 'Brogrammer'
-
 config.hide_tab_bar_if_only_one_tab = true
 config.enable_scroll_bar = true
 config.window_decorations = "RESIZE"
 -- config.window_background_opacity = 0.9
 {{ if eq .chezmoi.os "windows" }}
+{{   if eq .chezmoi.hostname "DESKTOP-4V4177V"  }}
+config.default_prog = {"{{ .chezmoi.homeDir }}/AppData/Local/Programs/nu/bin/nu.exe"}
+{{   else   }}
 config.default_domain = "WSL:Ubuntu-24.04"
+{{   end }}
 {{ else }}
 config.default_prog = {'zsh'}
 {{ end }}
