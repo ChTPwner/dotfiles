@@ -18,6 +18,7 @@ config.enable_scroll_bar = true
 config.window_decorations = "RESIZE"
 -- config.window_background_opacity = 0.9
 {{ if eq .chezmoi.os "windows" }}
+config.font = wezterm.font 'JetBrainsMono NF'
 {{   if eq .chezmoi.hostname "DESKTOP-4V4177V"  }}
 config.default_prog = {"{{ .chezmoi.homeDir }}/AppData/Local/Programs/nu/bin/nu.exe"}
 {{   else   }}
@@ -25,9 +26,9 @@ config.default_domain = "WSL:Ubuntu-24.04"
 {{   end }}
 {{ else }}
 config.default_prog = {'zsh'}
+config.font = wezterm.font 'JetBrainsMono NF'
 {{ end }}
 config.color_scheme = 'Catppuccin Mocha'
-config.font = wezterm.font 'JetBrainsMono NF'
 {{ if eq .chezmoi.os "darwin" }}
 config.font_size = 12.0
 {{ else }}
@@ -35,30 +36,6 @@ config.font_size = 10.0
 {{ end }}
 config.audible_bell = "Disabled"
 
-config.keys = {
-	{ key = 'o', mods = 'CTRL|SHIFT', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
-	{ key = 'e', mods = 'CTRL|SHIFT', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
-	{ key = '&', mods = 'ALT', action = act.ActivateTab(0) },
-	{ key = '2', mods = 'ALT', action = act.ActivateTab(1) },
-	{ key = '\"', mods = 'ALT', action = act.ActivateTab(2) },
-	{ key = '\'', mods = 'ALT', action = act.ActivateTab(3) },
-	{ key = '(', mods = 'ALT', action = act.ActivateTab(4) },
-	{ key = '-', mods = 'ALT', action = act.ActivateTab(5) },
-	{ key = '7', mods = 'ALT', action = act.ActivateTab(6) },
-	{ key = '_', mods = 'ALT', action = act.ActivateTab(7) },
-	{ key = '9', mods = 'ALT', action = act.ActivateTab(8) },
-	{ key = '0', mods = 'ALT', action = act.ActivateTab(9) },
-	{ key = ')', mods = 'ALT', action = act.ActivateTab(10) },
-	{ key = '=', mods = 'ALT', action = act.ActivateTab(11) },
-	{ key = 'UpArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
-	{ key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
-	{ key = 'DownArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
-	{ key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
-	{ key = 'LeftArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
-	{ key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
-	{ key = 'RightArrow', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
-	{ key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
-}
 
 -- and finally, return the configuration to wezterm
 return config
