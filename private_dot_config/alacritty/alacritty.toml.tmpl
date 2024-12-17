@@ -36,9 +36,6 @@ startup_mode = "Maximized"
 [terminal]
 {{ if eq .chezmoi.os "windows" }}
 shell.program = "wsl.exe"
-shell.args = ["-e tmux"]
-{{ else if eq .chezmoi.os "darwin" }}
-shell.program = "zsh"
 {{ else }}
-shell.program = "tmux"
+shell.program = "zsh"
 {{ end }}
