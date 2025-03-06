@@ -1,0 +1,25 @@
+packages:
+  arch:
+    terminal:
+      - fzf
+      - starship
+      - zoxide
+      - atuin
+      - direnv
+      - ripgrep
+      - tmux
+      - chromium
+      - vivaldi
+      - rustup
+      - npm
+      - go
+      - eza
+    yay:
+      - zsh-antidote
+      - brave-bin
+      - google-chrome
+      - google-chrome-dev
+      - google-chrome-beta
+      - tmux-plugin-manager
+      - lazygit
+

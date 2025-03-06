@@ -82,4 +82,8 @@ set -g @catppuccin_window_text " #W #{b:pane_current_path}"
 # set -g @catppuccin_status_modules_left "session application"
 
 # run tpm
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+run '/usr/share/tmux-plugin-manager/tpm'
+{{ else -}}
 run '~/.tmux/plugins/tpm/tpm'
+{{ end -}}

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+{{ range .packages.arch.terminal -}}
+sudo pacman -S --noconfirm --needed {{ . | quote }}
+{{ end -}}
+{{ range .packages.arch.yay -}}
+yay -S --noconfirm --needed {{ . | quote }}
+{{ end -}}
+{{ end -}}
