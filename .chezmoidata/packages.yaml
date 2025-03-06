@@ -13,6 +13,7 @@ packages:
       - rustup
       - npm
       - go
+      - fd
       - eza
     yay:
       - zsh-antidote
