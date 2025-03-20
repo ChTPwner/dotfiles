@@ -15,6 +15,7 @@ packages:
       - go
       - fd
       - eza
+      - prettier
     yay:
       - zsh-antidote
       - brave-bin
