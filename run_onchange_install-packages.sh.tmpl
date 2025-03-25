@@ -1,10 +1,14 @@
 #!/bin/sh
 
-{{ if eq .chezmoi.osRelease.id "arch" -}}
+{{ if (and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch")) -}}
 {{ range .packages.arch.terminal -}}
 sudo pacman -S --noconfirm --needed {{ . | quote }}
 {{ end -}}
 {{ range .packages.arch.yay -}}
 yay -S --noconfirm --needed {{ . | quote }}
+{{ end -}}
+{{ else if eq .chezmoi.os "darwin" -}}
+{{ range .packages.macos.brew -}}
+brew install -q {{ . | quote }}
 {{ end -}}
 {{ end -}}
