@@ -33,9 +33,7 @@ decorations = "none"
 opacity = 0.9
 startup_mode = "Maximized"
 
+{{ if eq .chezmoi.os "linu" }}
 [terminal]
-{{ if eq .chezmoi.os "windows" }}
-shell.program = "wsl.exe"
-{{ else }}
 shell.program = "zsh"
 {{ end }}
