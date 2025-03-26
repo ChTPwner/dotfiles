@@ -1,4 +1,4 @@
-{{- if ne .chezmoi.os "windows" }}
+{{ if ne .chezmoi.os "windows" -}}
 #!/bin/sh
 
 {{ if (and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch")) -}}
@@ -17,3 +17,4 @@ brew install -q {{ . | quote }}
 {{   end -}}
 {{ end -}}
 {{ end -}}
+
