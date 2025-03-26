@@ -24,4 +24,5 @@ packages:
       - google-chrome-beta
       - tmux-plugin-manager
       - lazygit
+      - sesh
 
