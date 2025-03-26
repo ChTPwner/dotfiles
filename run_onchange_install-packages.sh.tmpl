@@ -1,10 +1,17 @@
 #!/bin/sh
 
-{{ if eq .chezmoi.osRelease.id "arch" -}}
-{{ range .packages.arch.terminal -}}
-sudo pacman -S --noconfirm --needed {{ . | quote }}
-{{ end -}}
-{{ range .packages.arch.yay -}}
+{{ if (and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch")) -}}
+{{   range .packages.common -}}
 yay -S --noconfirm --needed {{ . | quote }}
-{{ end -}}
+{{   end -}}
+{{   range .packages.yay -}}
+yay -S --noconfirm --needed {{ . | quote }}
+{{   end -}}
+{{ else -}}
+{{   range .packages.common -}}
+brew install -q {{ . | quote }}
+{{   end -}}
+{{   range .packages.brew -}}
+brew install -q {{ . | quote }}
+{{   end -}}
 {{ end -}}

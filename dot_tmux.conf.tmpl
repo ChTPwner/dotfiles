@@ -66,8 +66,8 @@ set -g @catppuccin_window_current_text " #W #{b:pane_current_path} #{?window_zoo
 set -g @catppuccin_window_text " #W #{b:pane_current_path}"
 
 # run tpm
-{{ if eq .chezmoi.osRelease.id "arch" -}}
 run '/usr/share/tmux-plugin-manager/tpm'
+{{ if (and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch")) -}}
 {{ else -}}
 run '~/.tmux/plugins/tpm/tpm'
 {{ end -}}
