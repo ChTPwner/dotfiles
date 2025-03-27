@@ -10,7 +10,7 @@ unfocused_hollow = true
 [font]{{ if eq .chezmoi.os "darwin" }}
 size = 12.0
 {{ else }}
-size = 10.0
+size = 13.0
 {{ end }}
 
 [font.normal]{{ if eq .chezmoi.os "windows" }}
@@ -33,7 +33,7 @@ decorations = "none"
 opacity = 0.9
 startup_mode = "Maximized"
 
-{{ if eq .chezmoi.os "linu" }}
+{{ if eq .chezmoi.os "linux" }}
 [terminal]
 shell.program = "zsh"
 {{ end }}
