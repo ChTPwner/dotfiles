@@ -1,6 +1,7 @@
 packages:
   common:
     - fzf
+    - nvim
     - starship
     - zoxide
     - atuin
@@ -27,3 +28,4 @@ packages:
   brew:
     - antidote
     - golang
+    - tpm

@@ -26,7 +26,9 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.clangd" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
     { import = "lazyvim.plugins.extras.lang.docker" },
+{{- if ne .chezmoi.os "windows" }}
     { import = "lazyvim.plugins.extras.editor.telescope" },
+{{ end }}
     { import = "lazyvim.plugins.extras.util.project" },
     { import = "plugins" },
   },

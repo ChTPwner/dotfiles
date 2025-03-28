@@ -69,7 +69,8 @@ set -g @catppuccin_window_text " #W #{b:pane_current_path}"
 run '/usr/share/tmux-plugin-manager/tpm'
 {{ if (and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch")) -}}
 {{ else -}}
-run '~/.tmux/plugins/tpm/tpm'
+#run '~/.tmux/plugins/tpm/tpm'
+run '$HOMEBREW_PREFIX/opt/tpm/share/tpm/tpm'
 {{ end -}}
 
 # Sesh integration
