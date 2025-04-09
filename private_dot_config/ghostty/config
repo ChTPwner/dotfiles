@@ -3,3 +3,5 @@ window-decoration = false
 background-opacity = 0.8
 maximize = true
 command = "/bin/zsh"
+font-family = "JetBrainoMonoNFM Regular"
+font-size = 13
