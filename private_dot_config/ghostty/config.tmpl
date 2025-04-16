@@ -1,0 +1,12 @@
+theme = catppuccin-mocha
+background-opacity = 0.8
+maximize = true
+command = "/bin/zsh"
+{{ if eq .chezmoi.os "darwin" -}}
+window-decoration = true
+font-family = "JetBrainsMonoNL Nerd Font Mono"
+{{ else -}}
+window-decoration = false
+font-family = "JetBrainsMonoNL NF Regular"
+{{ end }}
+font-size = 13
