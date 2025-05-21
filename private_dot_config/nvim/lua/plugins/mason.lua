@@ -11,6 +11,7 @@ return {
       "black",
       "isort",
       "pylint",
+      "debugpy",
       "clangd",
       "dockerfile-language-server",
       "helm-ls",
