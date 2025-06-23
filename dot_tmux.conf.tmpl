@@ -76,3 +76,6 @@ run '$HOMEBREW_PREFIX/opt/tpm/share/tpm/tpm'
 # Sesh integration
 source-file ~/.tmux/config/sesh.conf
 bind -N "last-session (via sesh) " L run-shell "sesh last"
+set -ga terminal-overrides ",*256col*:Tc"
+set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
+set-environment -g COLORTERM "truecolor"
