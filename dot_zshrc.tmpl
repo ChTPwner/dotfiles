@@ -50,3 +50,9 @@ eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
+
+{{ if eq .chezmoi.hostname "FRL-DNJ4GP2021" -}}
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/mac-Z30TDELA/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+{{ end -}}
