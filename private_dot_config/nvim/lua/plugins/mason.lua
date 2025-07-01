@@ -1,5 +1,5 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   opts = {
     ensure_installed = {
       "stylua",
@@ -11,6 +11,7 @@ return {
       "black",
       "isort",
       "pylint",
+      "debugpy",
       "clangd",
       "dockerfile-language-server",
       "helm-ls",
