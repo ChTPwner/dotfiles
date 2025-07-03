@@ -15,6 +15,7 @@ packages:
     - prettier
     - lazygit
     - sesh
+    - mise
   yay:
     - go
     - chromium

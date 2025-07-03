@@ -7,8 +7,8 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "One Dark Pro",
-  "vim_mode": false,
+  "theme": "Catppuccin Macchiato",
+  "vim_mode": true,
   "hour_format": "hour24",
   // "auto_update_extensions": {"",},
   "features": {

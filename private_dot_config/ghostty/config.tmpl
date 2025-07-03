@@ -4,10 +4,9 @@ maximize = true
 command = "/bin/zsh"
 {{ if eq .chezmoi.os "darwin" -}}
 window-decoration = true
-font-family = "JetBrainsMonoNL Nerd Font Mono"
 macos-option-as-alt = left
 {{ else -}}
 window-decoration = false
-font-family = "JetBrainsMonoNL NF Regular"
-{{ end }}
+{{ end -}}
+font-family = "JetBrainsMonoNL Nerd Font Mono"
 font-size = 13.0
