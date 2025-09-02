@@ -1,5 +1,6 @@
 README.md
 {{- if ne .chezmoi.os "darwin" -}}
 ~/Library/LaunchAgents/com.local.KeyRemapping.plist
+~/Documents/Raycast 2025-09-02 20.35.00.rayconfig
 {{- end -}}
 
