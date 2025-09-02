@@ -2,5 +2,6 @@ README.md
 {{- if ne .chezmoi.os "darwin" -}}
 ~/Library/LaunchAgents/com.local.KeyRemapping.plist
 ~/Documents/Raycast*
+~/.config/linearmouse/linearmouse.json
 {{- end -}}
 
