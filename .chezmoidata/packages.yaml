@@ -31,3 +31,4 @@ packages:
     - antidote
     - golang
     - tpm
+    - linearmouse
