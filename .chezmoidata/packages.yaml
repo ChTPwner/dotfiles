@@ -27,8 +27,10 @@ packages:
     - google-chrome-beta
     - tmux-plugin-manager
     - markdown-toc
+    - carapace-bin
   brew:
     - antidote
+    - carapace
     - golang
     - tpm
     - linearmouse
