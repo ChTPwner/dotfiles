@@ -1,0 +1,68 @@
+# vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+
+#: Fonts
+#: kitty has very powerful font management. You can configure
+#: individual font faces and even specify special fonts for particular
+#: characters.
+{{ if eq .chezmoi.os "darwin" -}}
+font family      JetBrainsMonoNL Nerd Font Mono
+macos_option_as_alt yes
+hide_window_decorations no
+{{ else -}}
+font_family      JetBrainsMono NF
+hide_window_decorations yes
+{{ end }}
+
+font_size 13.0
+scrollback_lines 10000
+
+map kitty_mod+w close_window
+map kitty_mod+] next_window
+map kitty_mod+[ previous_window
+map kitty_mod+f move_window_forward
+map kitty_mod+b move_window_backward
+map kitty_mod+` move_window_to_top
+map kitty_mod+r start_resizing_window
+map kitty_mod+& first_window
+map kitty_mod+é second_window
+map kitty_mod+" third_window
+map kitty_mod+' fourth_window
+map kitty_mod+( fifth_window
+map kitty_mod+- sixth_window
+map kitty_mod+è seventh_window
+map kitty_mod+_ eighth_window
+map kitty_mod+ç ninth_window
+map kitty_mod+à tenth_window
+
+#: Tab management 
+
+map ctrl+alt+& goto_tab 1
+map ctrl+alt+é goto_tab 2
+map ctrl+alt+" goto_tab 3
+map ctrl+alt+' goto_tab 4
+map ctrl+alt+( goto_tab 5
+map ctrl+alt+- goto_tab 6
+map ctrl+alt+è goto_tab 7
+map ctrl+alt+_ goto_tab 8
+map ctrl+alt+ç goto_tab 9
+map ctrl+alt+à goto_tab 10
+
+map F1 launch --allow-remote-control kitty +kitten broadcast
+map alt+left neighboring_window left
+map alt+h neighboring_window left
+
+map alt+right neighboring_window right
+map alt+l neighboring_window right
+
+map alt+down neighboring_window down
+map alt+j neighboring_window down
+
+map alt+up neighboring_window up
+map alt+k neighboring_window up
+map shift+left move_window right
+map shift+down move_window up
+
+# BEGIN_KITTY_THEME
+# VSCode_Dark
+include current-theme.conf
+# END_KITTY_THEME
