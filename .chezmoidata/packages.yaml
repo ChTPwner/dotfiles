@@ -16,6 +16,7 @@ packages:
     - lazygit
     - sesh
     - mise
+    - tree-sitter-cli
   yay:
     - go
     - chromium
