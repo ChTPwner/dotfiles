@@ -30,7 +30,6 @@ bind BTab switch-client -l
 # tpm plugins
 set -g @plugin 'catppuccin/tmux'
 set -g @plugin 'tmux-plugins/tpm'
-# set -g @plugin 'omerxx/tmux-sessionx'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'tmux-plugins/tmux-yank'
@@ -40,7 +39,6 @@ set -g @plugin 'fcsonline/tmux-thumbs'
 set -g @plugin 'sainnhe/tmux-fzf'
 
 # tmux thumbs
-# set -g @thumbs-alphaberrazerty
 run-shell ~/.tmux/plugins/tmux-thumbs/tmux-thumbs.tmux
 
 # sesh integration
@@ -59,13 +57,6 @@ bind-key "o" run-shell "sesh connect \"$(
     --preview-window 'right:55%' \
     --preview 'sesh preview {}'
 )\""
-
-# tmux-sessionx config
-# unbind 'o'
-# set -g @sessionx-bind 'o'
-# set -g @sessionx-tree-mode 'off'
-# set -g @sessionx-zoxide-mode 'on'
-# set -g @sessionx-window-mode 'on'
 
 # continuum - automatic restore
 set -g @continuum-restore 'on'
