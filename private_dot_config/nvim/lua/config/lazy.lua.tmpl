@@ -33,11 +33,11 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.dap.core" },
 {{- if ne .chezmoi.os "windows" }}
     { import = "lazyvim.plugins.extras.editor.telescope" },
+    { import = "lazyvim.plugins.extras.util.chezmoi" },
 {{ end }}
     { import = "lazyvim.plugins.extras.util.project" },
     { import = "lazyvim.plugins.extras.vscode" },
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
-    { import = "lazyvim.plugins.extras.util.chezmoi" },
     { import = "plugins" },
   },
   defaults = {

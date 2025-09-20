@@ -4,4 +4,8 @@ README.md
 ~/Documents/Raycast*
 ~/.config/linearmouse/linearmouse.json
 {{- end -}}
+{{- if ne .chezmoi.os "windows" -}}
+~/AppData/Roaming/nushell/config.nu
+~/AppData/Roaming/nushell/env.nu
+{{- end -}}
 
