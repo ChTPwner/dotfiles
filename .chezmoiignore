@@ -8,4 +8,8 @@ README.md
 ~/AppData/Roaming/nushell/config.nu
 ~/AppData/Roaming/nushell/env.nu
 {{- end -}}
+{{- if eq .chezmoi.os "windows" -}}
+~/nushell/config.nu
+~/nushell/env.nu
+{{- end -}}
 
