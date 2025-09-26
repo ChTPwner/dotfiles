@@ -1,15 +1,12 @@
 README.md
-{{- if ne .chezmoi.os "darwin" -}}
-~/Library/LaunchAgents/com.local.KeyRemapping.plist
-~/Documents/Raycast*
-~/.config/linearmouse/linearmouse.json
-{{- end -}}
-{{- if ne .chezmoi.os "windows" -}}
-~/AppData/Roaming/nushell/config.nu
-~/AppData/Roaming/nushell/env.nu
-{{- end -}}
-{{- if eq .chezmoi.os "windows" -}}
-~/nushell/config.nu
-~/nushell/env.nu
-{{- end -}}
+{{- if ne .chezmoi.os "darwin" }}
+Library
+Documents/Raycast*
+.config/linearmouse
+{{- end }}
+{{- if ne .chezmoi.os "windows" }}
+AppData
+{{- else }}
+.config/nushell
+{{- end }}
 
