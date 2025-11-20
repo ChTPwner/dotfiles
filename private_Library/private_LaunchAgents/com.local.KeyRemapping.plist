@@ -3,20 +3,26 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.local.KeyRemapping</string>
+    <string>com.user.KeyRemapping</string>
     <key>ProgramArguments</key>
     <array>
         <string>/usr/bin/hidutil</string>
         <string>property</string>
+        <string>--matching</string>
+        <string>{"VendorID":0x0,"ProductID":0x0}</string>
         <string>--set</string>
         <string>{"UserKeyMapping":[
             {
-              "HIDKeyboardModifierMappingSrc": 0x7000000E7,
-              "HIDKeyboardModifierMappingDst": 0x7000000E6
-            },
-            {
               "HIDKeyboardModifierMappingSrc": 0x700000039,
               "HIDKeyboardModifierMappingDst": 0x700000029
+            },
+            {
+              "HIDKeyboardModifierMappingSrc": 0x7000000e6,
+              "HIDKeyboardModifierMappingDst": 0x7000000e4
+            },
+            {
+              "HIDKeyboardModifierMappingSrc": 0x7000000E7,
+              "HIDKeyboardModifierMappingDst": 0x7000000E6
             }
         ]}</string>
     </array>

@@ -3,21 +3,21 @@ export VISUAL="vi"
 export EDITOR="vim"
 
 export PATH=$PATH:${HOME}/.local/bin:${HOME}/bin:${HOME}/go/bin:${HOME}/.luarocks/bin:/snap/bin:${HOME}/.cargo/bin
-{{ if eq .chezmoi.os "darwin" }}
-{{   if eq .chezmoi.username "mac-Z30TDELA"}}
+{{- if eq .chezmoi.os "darwin" }}
+{{-   if eq .chezmoi.username "mac-Z30TDELA"}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
-{{ else -}}
+{{- else }}
 eval "$(/usr/local/bin/brew shellenv)"
-{{   end }}
+{{-   end }}
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
-{{ else if eq .chezmoi.os "linux"}}
-{{   if  eq .chezmoi.osRelease.id "arch" }}
+{{- else if eq .chezmoi.os "linux"}}
+{{-   if  eq .chezmoi.osRelease.id "arch" }}
 source /usr/share/zsh-antidote/antidote.zsh
-{{   else }}
+{{-   else }}
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source /home/linuxbrew/.linuxbrew/opt/antidote/share/antidote/antidote.zsh
-{{   end }}
-{{ end }}
+{{-   end }}
+{{- end }}
 
 # History
 HISTSIZE=5000
@@ -31,21 +31,20 @@ setopt hist_save_no_dups
 setopt hist_find_no_dups
 
 source ~/.envs.sh
-autoload -Uz compinit
-compinit -u
-antidote load
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
-export CARAPACE_BRIDGES='zsh,fish,bash' # optional
+export CARAPACE_BRIDGES='zsh,bash'
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
 
 source ~/.aliases.sh
 source ~/.functions.sh
+autoload -Uz compinit
+antidote load
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
@@ -58,4 +57,5 @@ eval "$(mise activate zsh)"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/mac-Z30TDELA/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=~/Library/Fonts"
 {{ end -}}
