@@ -7,11 +7,12 @@ import = [
 style = "Block"
 unfocused_hollow = true
 
-[font]{{ if eq .chezmoi.os "darwin" }}
+[font]
+{{- if eq .chezmoi.os "darwin" -}}
 size = 12.0
 {{ else }}
 size = 13.0
-{{ end }}
+{{ end -}}
 
 [font.normal]{{ if eq .chezmoi.os "windows" }}
 family = "JetBrainsMono NFM"
@@ -29,11 +30,11 @@ multiplier = 3
 
 [window]
 decorations = "none"
-#gtk_theme_variant = "dark"
 opacity = 0.9
 startup_mode = "Maximized"
 
-{{ if eq .chezmoi.os "linux" }}
+{{ if eq .chezmoi.os "linux" -}}
+{{  if ne .chezmoi.osRelease.id "cachyos" -}}
 [terminal]
 shell.program = "zsh"
-{{ end }}
+{{  end -}}{{ end -}}
