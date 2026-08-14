@@ -12,24 +12,14 @@ packages:
     - npm
     - fd
     - eza
-    - prettier
     - lazygit
     - sesh
     - mise
     - tree-sitter-cli
     - nushell
   yay:
-    - go
-    - chromium
-    - vivaldi
     - zsh-antidote
-    - brave-bin
-    - google-chrome
-    - google-chrome-dev
-    - google-chrome-beta
     - tmux-plugin-manager
-    - markdown-toc
-    - carapace-bin
   brew:
     - antidote
     - carapace
