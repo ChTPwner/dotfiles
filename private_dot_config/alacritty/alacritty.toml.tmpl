@@ -12,13 +12,14 @@ unfocused_hollow = true
 size = 12.0
 {{ else }}
 size = 13.0
-{{ end -}}
+{{- end }}
 
-[font.normal]{{ if eq .chezmoi.os "windows" }}
+[font.normal]
+{{- if eq .chezmoi.os "windows" -}}
 family = "JetBrainsMono NFM"
 {{ else }}
 family = "JetBrainsMono NF"
-{{ end }}
+{{ end -}}
 style = "Regular"
 
 [mouse]
