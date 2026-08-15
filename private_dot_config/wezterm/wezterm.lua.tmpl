@@ -19,13 +19,14 @@ config.enable_scroll_bar = false
 config.window_decorations = "RESIZE"
 {{   else }}
 config.window_decorations = "NONE"
-{{   end }}
-{{ end }}
+{{   end -}}
+{{ end -}}
 config.window_background_opacity = 0.9
-{{ if eq .chezmoi.os "windows" }}
+
+{{- if eq .chezmoi.os "windows" }}
 config.font = wezterm.font 'JetBrainsMono NF'
 config.default_prog = {"{{ .chezmoi.homeDir }}/AppData/Local/Programs/nu/bin/nu.exe"}
-{{ else if eq .chezmoi.os "darwin" }}
+{{- else if eq .chezmoi.os "darwin" }}
 config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
 local act = wezterm.action
 
@@ -46,8 +47,10 @@ config.keys = {
   },
 }
 config.native_macos_fullscreen_mode = true
-{{ else }}
+{{- else }}
+{{    if ne .chezmoi.osRelease.id "cachyos" -}}
 config.default_prog = {'zsh'}
+{{    end }}
 config.font = wezterm.font 'JetBrainsMono NF'
 {{ end }}
 config.color_scheme = 'Catppuccin Mocha'

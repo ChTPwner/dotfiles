@@ -1,0 +1,339 @@
+{
+  "chezmoi": {
+    "arch": "amd64",
+    "args": [
+      "chezmoi",
+      "data"
+    ],
+    "cacheDir": "/home/thibault/.cache/chezmoi",
+    "command": "data",
+    "commandDir": "/home/thibault/.local/share/chezmoi",
+    "config": {
+      "add": {
+        "encrypt": false,
+        "secrets": "warning",
+        "templateSymlinks": false
+      },
+      "age": {
+        "args": null,
+        "command": "age",
+        "identities": null,
+        "identity": "",
+        "passphrase": false,
+        "recipient": "",
+        "recipients": null,
+        "recipientsFile": "",
+        "recipientsFiles": null,
+        "suffix": ".age",
+        "symmetric": false,
+        "useBuiltin": false
+      },
+      "awsSecretsManager": {
+        "profile": "",
+        "region": ""
+      },
+      "azureKeyVault": {
+        "defaultVault": ""
+      },
+      "bitwarden": {
+        "command": "bw",
+        "unlock": false
+      },
+      "bitwardenSecrets": {
+        "command": "bws"
+      },
+      "cacheDir": "/home/thibault/.cache/chezmoi",
+      "cd": {
+        "args": null,
+        "command": ""
+      },
+      "color": "auto",
+      "completion": {
+        "custom": false
+      },
+      "dashlane": {
+        "args": null,
+        "command": "dcli"
+      },
+      "data": {},
+      "destDir": "/home/thibault",
+      "diff": {
+        "args": null,
+        "command": "",
+        "exclude": [],
+        "pager": "",
+        "pagerArgs": null,
+        "reverse": false,
+        "scriptContents": true
+      },
+      "docker": {
+        "command": "docker"
+      },
+      "doppler": {
+        "args": null,
+        "command": "doppler",
+        "config": "",
+        "project": ""
+      },
+      "edit": {
+        "apply": false,
+        "args": null,
+        "command": "",
+        "hardlink": true,
+        "minDuration": 1000000000,
+        "watch": false
+      },
+      "ejson": {
+        "key": "",
+        "keyDir": "/opt/ejson/keys"
+      },
+      "encryption": "",
+      "env": null,
+      "format": "json",
+      "git": {
+        "autoadd": false,
+        "autocommit": false,
+        "autopush": false,
+        "command": "git",
+        "commitMessageTemplate": "",
+        "commitMessageTemplateFile": "",
+        "lfs": false
+      },
+      "gitHub": {
+        "refreshPeriod": 60000000000
+      },
+      "gopass": {
+        "command": "gopass",
+        "mode": ""
+      },
+      "gpg": {
+        "args": null,
+        "command": "gpg",
+        "recipient": "",
+        "recipients": null,
+        "suffix": ".asc",
+        "symmetric": false
+      },
+      "hooks": null,
+      "interactive": false,
+      "interpreters": {
+        "bat": {
+          "args": null,
+          "command": ""
+        },
+        "cmd": {
+          "args": null,
+          "command": ""
+        },
+        "com": {
+          "args": null,
+          "command": ""
+        },
+        "exe": {
+          "args": null,
+          "command": ""
+        },
+        "nu": {
+          "args": null,
+          "command": "nu"
+        },
+        "pl": {
+          "args": null,
+          "command": "perl"
+        },
+        "ps1": {
+          "args": null,
+          "command": ""
+        },
+        "py": {
+          "args": null,
+          "command": "python3"
+        },
+        "rb": {
+          "args": null,
+          "command": "ruby"
+        }
+      },
+      "keepassxc": {
+        "args": null,
+        "command": "keepassxc-cli",
+        "database": "",
+        "mode": "cache-password",
+        "prompt": true
+      },
+      "keeper": {
+        "args": null,
+        "command": "keeper"
+      },
+      "lastpass": {
+        "command": "lpass"
+      },
+      "lessInteractive": false,
+      "merge": {
+        "args": null,
+        "command": "vimdiff"
+      },
+      "mode": "file",
+      "onepassword": {
+        "command": "op",
+        "mode": "account",
+        "prompt": true
+      },
+      "pager": "",
+      "pagerArgs": null,
+      "pass": {
+        "command": "pass"
+      },
+      "passhole": {
+        "args": null,
+        "command": "ph",
+        "prompt": true
+      },
+      "persistentState": "",
+      "pinentry": {
+        "args": null,
+        "command": "",
+        "options": [
+          "allow-external-password-cache"
+        ]
+      },
+      "progress": "auto",
+      "protonPass": {
+        "command": "pass-cli"
+      },
+      "rbw": {
+        "command": "rbw"
+      },
+      "safe": true,
+      "scriptEnv": null,
+      "scriptTempDir": "",
+      "secret": {
+        "args": null,
+        "command": ""
+      },
+      "sourceDir": "/home/thibault/.local/share/chezmoi",
+      "status": {
+        "exclude": [],
+        "pathStyle": "relative"
+      },
+      "tempDir": "/tmp",
+      "template": {
+        "options": [
+          "missingkey=error"
+        ]
+      },
+      "textConv": null,
+      "umask": 18,
+      "update": {
+        "apply": true,
+        "args": null,
+        "command": "",
+        "recurseSubmodules": true
+      },
+      "useBuiltinAge": "auto",
+      "useBuiltinGit": "auto",
+      "vault": {
+        "command": "vault"
+      },
+      "verbose": false,
+      "verify": {
+        "exclude": []
+      },
+      "warnings": {
+        "configFileTemplateHasChanged": true
+      },
+      "workingTree": "/home/thibault/.local/share/chezmoi"
+    },
+    "configFile": "/home/thibault/.config/chezmoi/chezmoi.toml",
+    "destDir": "/home/thibault",
+    "executable": "/usr/bin/chezmoi",
+    "flags": {
+      "dryRun": false,
+      "force": false,
+      "keepGoing": false,
+      "noPager": false,
+      "noTTY": false
+    },
+    "fqdnHostname": "cachyos-x8664WarwicKnerd",
+    "gid": "1000",
+    "group": "thibault",
+    "homeDir": "/home/thibault",
+    "hostname": "cachyos-x8664WarwicKnerd",
+    "kernel": {
+      "osrelease": "7.1.5-1-cachyos",
+      "ostype": "Linux",
+      "version": "#1 SMP PREEMPT_DYNAMIC Mon, 27 Jul 2026 14:05:40 +0000"
+    },
+    "os": "linux",
+    "osRelease": {
+      "ansiColor": "38;2;23;147;209",
+      "bugReportURL": "https://github.com/cachyos",
+      "buildID": "rolling",
+      "documentationURL": "https://wiki.cachyos.org/",
+      "homeURL": "https://cachyos.org/",
+      "id": "cachyos",
+      "idLike": "arch",
+      "logo": "cachyos",
+      "name": "CachyOS Linux",
+      "prettyName": "CachyOS",
+      "privacyPolicyURL": "https://terms.archlinux.org/docs/privacy-policy/",
+      "supportURL": "https://discuss.cachyos.org/"
+    },
+    "pathListSeparator": ":",
+    "pathSeparator": "/",
+    "rawHomeDir": "/home/thibault",
+    "sourceDir": "/home/thibault/.local/share/chezmoi",
+    "uid": "1000",
+    "username": "thibault",
+    "version": {
+      "builtBy": "",
+      "commit": "",
+      "date": "2026-07-20T20:15:21Z",
+      "version": "2.71.1"
+    },
+    "windowsVersion": {},
+    "workingTree": "/home/thibault/.local/share/chezmoi"
+  },
+  "packages": {
+    "brew": [
+      "antidote",
+      "carapace",
+      "golang",
+      "tpm",
+      "linearmouse"
+    ],
+    "common": [
+      "fzf",
+      "nvim",
+      "starship",
+      "zoxide",
+      "atuin",
+      "direnv",
+      "ripgrep",
+      "tmux",
+      "rustup",
+      "npm",
+      "fd",
+      "eza",
+      "prettier",
+      "lazygit",
+      "sesh",
+      "mise",
+      "tree-sitter-cli",
+      "nushell"
+    ],
+    "yay": [
+      "go",
+      "chromium",
+      "vivaldi",
+      "zsh-antidote",
+      "brave-bin",
+      "google-chrome",
+      "google-chrome-dev",
+      "google-chrome-beta",
+      "tmux-plugin-manager",
+      "markdown-toc",
+      "carapace-bin"
+    ]
+  }
+}

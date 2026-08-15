@@ -8,7 +8,9 @@ set -g renumber-windows on
 set -g set-clipboard on
 set -g status-key vi
 set -g mode-keys vi
+{{  if ne .chezmoi.osRelease.id "cachyos" }}
 set -g default-shell /bin/zsh
+{{ end -}}
 bind 'v' copy-mode
 bind 'P' paste-buffer
 set-option -g status-position top
